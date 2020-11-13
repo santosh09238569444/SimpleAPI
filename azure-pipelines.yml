@@ -34,11 +34,3 @@ steps:
 
 - task: PublishBuildArtifacts@1
   displayName: 'publish artifacts'
-
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Visual Studio Premium with MSDN(c9f38984-7bb2-408d-bdea-6a925db996fb)'
-    appType: 'apiApp'
-    WebAppName: 'SampleAPIDemo'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
